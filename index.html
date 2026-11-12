@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Achadinhos VIP | Ofertas do Mercado Livre com desconto</title>
+<meta name="description" content="Ofertas do Mercado Livre escolhidas a dedo, com desconto de verdade. Atualizadas várias vezes por dia.">
+<meta property="og:title" content="Achadinhos VIP | Ofertas do Mercado Livre">
+<meta property="og:description" content="Ofertas do Mercado Livre escolhidas a dedo, com desconto de verdade. Atualizadas várias vezes por dia.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#10233F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papel:#F3F5F9; --branco:#FFFFFF; --tinta:#10233F; --tinta-suave:#5B6B82;
+  --linha:#DCE2EC; --etiqueta:#E8402F; --etiqueta-escura:#B82D1F; --sol:#FFC83D;
+  --tg:#229ED9; --wpp:#1FA855;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);font:16px/1.5 'Figtree',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sol);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* Topo */
+.topo{background:var(--tinta);color:#fff;overflow:hidden;position:relative}
+.topo .wrap{padding-top:40px;padding-bottom:44px;position:relative;z-index:1}
+.marca{font:800 clamp(2.4rem,7vw,4.2rem)/0.95 'Bricolage Grotesque',sans-serif;letter-spacing:-0.03em}
+.sub{margin-top:14px;max-width:36ch;font-size:1.08rem;color:#C9D3E3}
+.acoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 22px;font-size:.98rem}
+.btn-tg{background:var(--tg);color:#fff}
+.btn-wpp{background:var(--wpp);color:#fff}
+.btn-tg:hover{background:#1B8AC0}.btn-wpp:hover{background:#188F48}
+.info{margin-top:22px;font-size:.88rem;color:#93A3BC}
+.tag-fundo{position:absolute;right:-60px;top:28px;width:340px;height:170px;background:var(--etiqueta);
+  clip-path:polygon(18% 0,100% 0,100% 100%,18% 100%,0 50%);transform:rotate(-12deg);opacity:.95}
+.tag-fundo::before{content:"";position:absolute;left:11%;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--tinta)}
+.tag-fundo span{position:absolute;left:30%;top:50%;transform:translateY(-50%);font:800 3.6rem/1 'Bricolage Grotesque',sans-serif;color:#fff;letter-spacing:-0.03em}
+
+/* Barra de busca e categorias */
+.barra{position:sticky;top:0;z-index:5;background:rgba(243,245,249,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--linha)}
+.barra .wrap{padding-top:12px;padding-bottom:12px}
+.busca{width:100%;padding:13px 16px;border:1px solid var(--linha);border-radius:12px;background:var(--branco);font:inherit;color:var(--tinta)}
+.chips{display:flex;gap:8px;overflow-x:auto;margin-top:10px;padding-bottom:2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--linha);background:var(--branco);color:var(--tinta);border-radius:999px;padding:7px 14px;font:600 .88rem 'Figtree',sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:#fff}
+
+/* Grade de ofertas */
+main .wrap{padding-top:22px;padding-bottom:110px}
+.contagem{font-size:.92rem;color:var(--tinta-suave);margin-bottom:14px}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{background:var(--branco);border:1px solid var(--linha);border-radius:16px;display:flex;flex-direction:column;overflow:hidden;position:relative}
+.foto{aspect-ratio:1/1;background:var(--branco);display:flex;align-items:center;justify-content:center;padding:14px;border-bottom:1px solid var(--linha)}
+.foto img{max-width:100%;max-height:100%;object-fit:contain}
+.foto .sem{font-size:3rem}
+.selo{position:absolute;top:10px;left:10px;background:var(--sol);color:var(--tinta);font:800 .95rem/1 'Bricolage Grotesque',sans-serif;
+  padding:9px 10px;border-radius:50%;min-width:52px;min-height:52px;display:flex;align-items:center;justify-content:center;transform:rotate(-10deg)}
+.corpo{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cat{font-size:.78rem;color:var(--tinta-suave);font-weight:600}
+.titulo{font-size:.95rem;line-height:1.35;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
+.de{font-size:.85rem;color:var(--tinta-suave);text-decoration:line-through;min-height:1.3em}
+.preco{align-self:flex-start;display:inline-flex;align-items:baseline;gap:0;background:var(--etiqueta);color:#fff;
+  padding:7px 14px 7px 24px;clip-path:polygon(12px 0,100% 0,100% 100%,12px 100%,0 50%);position:relative}
+.preco::before{content:"";position:absolute;left:8px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:var(--branco)}
+.preco small{font-weight:700;font-size:.85rem}
+.preco small:first-child{margin-right:4px}
+.preco b{font:800 1.45rem/1 'Bricolage Grotesque',sans-serif;letter-spacing:-0.02em}
+.extras{display:flex;flex-wrap:wrap;gap:6px;font-size:.78rem;font-weight:600;min-height:1.6em}
+.extras span{background:var(--papel);border-radius:6px;padding:3px 8px}
+.extras .cupom{background:#FFF1C9}
+.ver{margin-top:auto;display:block;text-align:center;text-decoration:none;font-weight:700;background:var(--tinta);color:#fff;border-radius:10px;padding:11px}
+.ver:hover{background:#1C3760}
+.linha-topo{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+.linha-topo .contagem{margin:0}
+.ordenar{border:1px solid var(--linha);border-radius:10px;padding:8px 10px;background:var(--branco);font:600 .88rem 'Figtree',sans-serif;color:var(--tinta)}
+.secao-titulo{font:800 1.6rem/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-0.02em;margin-bottom:14px}
+.destaques{margin-bottom:34px}
+.dest-grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.dest{display:flex;gap:14px;align-items:center;background:var(--branco);border:2px solid var(--etiqueta);border-radius:18px;padding:12px 14px;text-decoration:none;color:var(--tinta)}
+.dest:hover{background:#FFF6F4}
+.dest-foto{flex:0 0 92px;height:92px;display:flex;align-items:center;justify-content:center}
+.dest-foto img{max-width:100%;max-height:100%;object-fit:contain}
+.dest-foto .sem{font-size:2.6rem}
+.dest-info{min-width:0;display:flex;flex-direction:column;gap:4px}
+.dest-pct{font:800 2.1rem/1 'Bricolage Grotesque',sans-serif;color:var(--etiqueta);letter-spacing:-0.03em}
+.dest-nome{font-size:.88rem;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.dest-valor{font-weight:800;font-size:1.05rem}
+.nova{position:absolute;top:12px;right:12px;background:var(--tinta);color:#fff;font-size:.74rem;font-weight:700;border-radius:6px;padding:3px 8px}
+.convite{grid-column:1/-1;background:var(--tinta);color:#fff;border-radius:18px;padding:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.convite h3{font:800 1.45rem/1.15 'Bricolage Grotesque',sans-serif;letter-spacing:-0.02em}
+.convite p{color:#C9D3E3;margin-top:4px;max-width:46ch}
+.convite .acoes{margin-top:0}
+.vazio{display:none;text-align:center;padding:48px 16px;color:var(--tinta-suave)}
+.vazio button{margin-top:12px;border:0;background:var(--tinta);color:#fff;border-radius:999px;padding:10px 18px;font:700 .92rem 'Figtree',sans-serif;cursor:pointer}
+
+/* Rodapé */
+footer{border-top:1px solid var(--linha);color:var(--tinta-suave);font-size:.85rem}
+footer .wrap{padding-top:24px;padding-bottom:24px}
+footer p+p{margin-top:6px}
+
+/* Barra fixa no celular */
+.fixa{display:none}
+@media (max-width:860px){
+  .dest-grade{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;scrollbar-width:none}
+  .dest{scroll-snap-align:start}
+}
+@media (max-width:640px){
+  .convite .acoes{display:flex;width:100%}
+  .convite .btn{flex:1;justify-content:center}
+  .secao-titulo{font-size:1.3rem}
+  .tag-fundo{display:none}
+  .topo .wrap{padding-top:30px;padding-bottom:34px}
+  .acoes{display:none}
+  .grade{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .corpo{padding:10px;gap:6px}
+  .titulo{font-size:.86rem}
+  .preco b{font-size:1.2rem}
+  .selo{min-width:44px;min-height:44px;font-size:.82rem}
+  .fixa{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:9;padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+    background:var(--branco);border-top:1px solid var(--linha)}
+  .fixa .btn{flex:1;justify-content:center;padding:12px 10px;font-size:.92rem}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="topo">
+  <div class="tag-fundo" aria-hidden="true"><span>%</span></div>
+  <div class="wrap">
+    <h1 class="marca">Achadinhos VIP</h1>
+    <p class="sub">Ofertas do Mercado Livre escolhidas a dedo, com desconto de verdade. Atualizadas várias vezes por dia.</p>
+    <div class="acoes"><a class="btn btn-tg" href="https://t.me/achadinhos_vip_oficial" target="_blank" rel="noopener">Entrar no canal do Telegram</a><a class="btn btn-wpp" href="https://chat.whatsapp.com/KfhKEQ34I7X8WumAA7NXxe" target="_blank" rel="noopener">Entrar no grupo do WhatsApp</a></div>
+    <p class="info">Atualizado em 11/11 às 21:06, com 15 ofertas ativas.</p>
+  </div>
+</header>
+
+<div class="barra">
+  <div class="wrap">
+    <input id="busca" class="busca" type="search" placeholder="Buscar produto, ex.: fone, perfume, panela" aria-label="Buscar ofertas">
+    <div class="chips" role="group" aria-label="Filtrar por categoria"><button class="chip" data-cat="" aria-pressed="true">Todas</button><button class="chip" data-cat="🍳 Casa e Cozinha — Ofertas" aria-pressed="false">🍳 Casa e Cozinha — Ofertas</button><button class="chip" data-cat="🔌 Eletrodomésticos — Ofertas" aria-pressed="false">🔌 Eletrodomésticos — Ofertas</button><button class="chip" data-cat="🌸 Perfumes Femininos" aria-pressed="false">🌸 Perfumes Femininos</button><button class="chip" data-cat="✨ Maquiagem" aria-pressed="false">✨ Maquiagem</button><button class="chip" data-cat="⚡ Ofertas Relâmpago" aria-pressed="false">⚡ Ofertas Relâmpago</button><button class="chip" data-cat="💎 Hub Central de Afiliados" aria-pressed="false">💎 Hub Central de Afiliados</button></div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <section class="destaques" aria-labelledby="t-dest">
+      <h2 class="secao-titulo" id="t-dest">Maiores descontos agora</h2>
+      <div class="dest-grade">
+        <a class="dest" href="https://meli.la/1HfmtaB" target="_blank" rel="nofollow sponsored noopener">
+          <div class="dest-foto"><img src="https://http2.mlstatic.com/D_NQ_NP_993608-MLA99842424895_112025-O.webp" alt="Lixeira Automatica Inteligente 16 L Com Sensor Touch Cozinha Cor Branco" loading="lazy"></div>
+          <div class="dest-info">
+            <span class="dest-pct">-76%</span>
+            <span class="dest-nome">Lixeira Automatica Inteligente 16 L Com Sensor Touch Cozinha Cor Branco</span>
+            <span class="dest-valor">R$ 60,00</span>
+          </div>
+        </a>
+        <a class="dest" href="https://meli.la/1TDmBPf" target="_blank" rel="nofollow sponsored noopener">
+          <div class="dest-foto"><img src="https://http2.mlstatic.com/D_NQ_NP_613832-MLA115392564655_072026-O.webp" alt="Jogo De Panelas Smart Plus Vanilla Indução Cerâmico 5peças Brinox 4774/101" loading="lazy"></div>
+          <div class="dest-info">
+            <span class="dest-pct">-63%</span>
+            <span class="dest-nome">Jogo De Panelas Smart Plus Vanilla Indução Cerâmico 5peças Brinox 4774/101</span>
+            <span class="dest-valor">R$ 318,98</span>
+          </div>
+        </a>
+        <a class="dest" href="https://meli.la/1TDmBPf" target="_blank" rel="nofollow sponsored noopener">
+          <div class="dest-foto"><img src="https://http2.mlstatic.com/D_NQ_NP_772208-MLA109984612452_042026-O.webp" alt="Cadeira De Escritorio Noble Presidente Ergonomica Couro Sintetico Com Apoio De Pes Cor Preta Vincere Brasil" loading="lazy"></div>
+          <div class="dest-info">
+            <span class="dest-pct">-56%</span>
+            <span class="dest-nome">Cadeira De Escritorio Noble Presidente Ergonomica Couro Sintetico Com Apoio De Pes Cor Preta Vincere Brasil</span>
+            <span class="dest-valor">R$ 383,78</span>
+          </div>
+        </a>
+      </div>
+    </section>
+    <h2 class="secao-titulo">Todas as ofertas</h2>
+    <div class="linha-topo">
+      <p class="contagem" id="contagem" aria-live="polite"></p>
+      <select id="ordenar" class="ordenar" aria-label="Ordenar ofertas">
+        <option value="recentes">Mais recentes</option>
+        <option value="desconto">Maior desconto</option>
+        <option value="preco">Menor preço</option>
+      </select>
+    </div>
+    <div class="grade" id="grade">
+      <article class="card" data-cat="🌸 Perfumes Femininos" data-busca="perfume rabanne pure xs eau de parfum 50 ml feminino 🌸 perfumes femininos"
+               data-desconto="29" data-preco="445.45" data-ordem="0">
+        <span class="selo">-29%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_968535-MLA94548490888_102025-O.webp" alt="Perfume Rabanne Pure XS Eau de Parfum 50 ml feminino" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">🌸 Perfumes Femininos</span>
+          <h2 class="titulo">Perfume Rabanne Pure XS Eau de Parfum 50 ml feminino</h2>
+          <span class="de">De R$ 629,85</span>
+          <span class="preco"><small>R$</small><b>445</b><small>,45</small></span>
+          <div class="extras"></div>
+          <a class="ver" href="https://meli.la/2xELMyh" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="🌸 Perfumes Femininos" data-busca="idôle lancôme, perfume feminino eau de parfum chipre floral com rosas centifolia, damascena e jasmim, 100ml 🌸 perfumes femininos"
+               data-desconto="46" data-preco="589.00" data-ordem="1">
+        <span class="selo">-46%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_924475-MLA118139378854_102026-O.webp" alt="Idôle Lancôme, Perfume Feminino Eau de Parfum Chipre Floral com Rosas Centifolia, Damascena e Jasmim, 100ml" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">🌸 Perfumes Femininos</span>
+          <h2 class="titulo">Idôle Lancôme, Perfume Feminino Eau de Parfum Chipre Floral com Rosas Centifolia, Damascena e Jasmim, 100ml</h2>
+          <span class="de">De R$ 1.099,00</span>
+          <span class="preco"><small>R$</small><b>589</b><small>,00</small></span>
+          <div class="extras"></div>
+          <a class="ver" href="https://meli.la/2js9QAQ" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="✨ Maquiagem" data-busca="pó compacto translúcido boca rosa jujuba ✨ maquiagem"
+               data-desconto="41" data-preco="41.00" data-ordem="2">
+        <span class="selo">-41%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_899169-MLA81771385866_012025-O.webp" alt="Pó Compacto Translúcido Boca Rosa Jujuba" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">✨ Maquiagem</span>
+          <h2 class="titulo">Pó Compacto Translúcido Boca Rosa Jujuba</h2>
+          <span class="de">De R$ 69,90</span>
+          <span class="preco"><small>R$</small><b>41</b><small>,00</small></span>
+          <div class="extras"><span>Frete grátis</span></div>
+          <a class="ver" href="https://meli.la/2ZxrGcn" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="✨ Maquiagem" data-busca="chocochilli gloss fran by franciny ehlke acabamento brilhante chocolate ✨ maquiagem"
+               data-desconto="55" data-preco="19.20" data-ordem="3">
+        <span class="selo">-55%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_648249-MLA120330610885_102026-O.webp" alt="Chocochilli Gloss Fran By Franciny Ehlke Acabamento Brilhante Chocolate" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">✨ Maquiagem</span>
+          <h2 class="titulo">Chocochilli Gloss Fran By Franciny Ehlke Acabamento Brilhante Chocolate</h2>
+          <span class="de">De R$ 42,99</span>
+          <span class="preco"><small>R$</small><b>19</b><small>,20</small></span>
+          <div class="extras"><span>Frete grátis</span></div>
+          <a class="ver" href="https://meli.la/2XG8k8T" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="🍳 Casa e Cozinha — Ofertas" data-busca="jogo de panelas smart plus vanilla indução cerâmico 5peças brinox 4774/101 🍳 casa e cozinha — ofertas"
+               data-desconto="63" data-preco="318.98" data-ordem="4">
+        <span class="selo">-63%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_613832-MLA115392564655_072026-O.webp" alt="Jogo De Panelas Smart Plus Vanilla Indução Cerâmico 5peças Brinox 4774/101" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">🍳 Casa e Cozinha — Ofertas</span>
+          <h2 class="titulo">Jogo De Panelas Smart Plus Vanilla Indução Cerâmico 5peças Brinox 4774/101</h2>
+          <span class="de">De R$ 869,99</span>
+          <span class="preco"><small>R$</small><b>318</b><small>,98</small></span>
+          <div class="extras"><span>Frete grátis</span></div>
+          <a class="ver" href="https://meli.la/1TDmBPf" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="🍳 Casa e Cozinha — Ofertas" data-busca="lixeira automatica inteligente 16 l com sensor touch cozinha cor branco 🍳 casa e cozinha — ofertas"
+               data-desconto="76" data-preco="60.00" data-ordem="5">
+        <span class="selo">-76%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_993608-MLA99842424895_112025-O.webp" alt="Lixeira Automatica Inteligente 16 L Com Sensor Touch Cozinha Cor Branco" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">🍳 Casa e Cozinha — Ofertas</span>
+          <h2 class="titulo">Lixeira Automatica Inteligente 16 L Com Sensor Touch Cozinha Cor Branco</h2>
+          <span class="de">De R$ 257,99</span>
+          <span class="preco"><small>R$</small><b>60</b><small>,00</small></span>
+          <div class="extras"><span>Frete grátis</span></div>
+          <a class="ver" href="https://meli.la/1HfmtaB" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="🍳 Casa e Cozinha — Ofertas" data-busca="sofá sem caixa retrátil 2,00m soft bonnie boucle cama inbox cor bege desenho do tecido liso 🍳 casa e cozinha — ofertas"
+               data-desconto="35" data-preco="2619.00" data-ordem="6">
+        <span class="selo">-35%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_789464-MLA96152511017_102025-O.webp" alt="Sofá Sem Caixa Retrátil 2,00m Soft Bonnie Boucle Cama Inbox Cor Bege Desenho Do Tecido Liso" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">🍳 Casa e Cozinha — Ofertas</span>
+          <h2 class="titulo">Sofá Sem Caixa Retrátil 2,00m Soft Bonnie Boucle Cama Inbox Cor Bege Desenho Do Tecido Liso</h2>
+          <span class="de">De R$ 4.089,00</span>
+          <span class="preco"><small>R$</small><b>2.619</b><small>,00</small></span>
+          <div class="extras"><span>Frete grátis</span></div>
+          <a class="ver" href="https://meli.la/29HHVDE" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="🍳 Casa e Cozinha — Ofertas" data-busca="cadeira de escritorio noble presidente ergonomica couro sintetico com apoio de pes cor preta vincere brasil 🍳 casa e cozinha — ofertas"
+               data-desconto="56" data-preco="383.78" data-ordem="7">
+        <span class="selo">-56%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_772208-MLA109984612452_042026-O.webp" alt="Cadeira De Escritorio Noble Presidente Ergonomica Couro Sintetico Com Apoio De Pes Cor Preta Vincere Brasil" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">🍳 Casa e Cozinha — Ofertas</span>
+          <h2 class="titulo">Cadeira De Escritorio Noble Presidente Ergonomica Couro Sintetico Com Apoio De Pes Cor Preta Vincere Brasil</h2>
+          <span class="de">De R$ 886,80</span>
+          <span class="preco"><small>R$</small><b>383</b><small>,78</small></span>
+          <div class="extras"><span>Frete grátis</span></div>
+          <a class="ver" href="https://meli.la/1TDmBPf" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="🔌 Eletrodomésticos — Ofertas" data-busca="micro-ondas 33l philco teclas fáceis limpa fácil 1400w pm36 220v 🔌 eletrodomésticos — ofertas"
+               data-desconto="34" data-preco="454.91" data-ordem="8">
+        <span class="selo">-34%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_821650-MLA99991748727_112025-O.webp" alt="Micro-ondas 33l Philco Teclas Fáceis Limpa Fácil 1400w Pm36 220V" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">🔌 Eletrodomésticos — Ofertas</span>
+          <h2 class="titulo">Micro-ondas 33l Philco Teclas Fáceis Limpa Fácil 1400w Pm36 220V</h2>
+          <span class="de">De R$ 689,90</span>
+          <span class="preco"><small>R$</small><b>454</b><small>,91</small></span>
+          <div class="extras"><span>Frete grátis</span></div>
+          <a class="ver" href="https://meli.la/1yrh3aQ" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="🔌 Eletrodomésticos — Ofertas" data-busca="frigobar 67 litros black edition inverter bivolt midea preto 🔌 eletrodomésticos — ofertas"
+               data-desconto="28" data-preco="711.55" data-ordem="9">
+        <span class="selo">-28%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_831877-MLA99547408964_122025-O.webp" alt="Frigobar 67 Litros Black Edition Inverter Bivolt Midea Preto" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">🔌 Eletrodomésticos — Ofertas</span>
+          <h2 class="titulo">Frigobar 67 Litros Black Edition Inverter Bivolt Midea Preto</h2>
+          <span class="de">De R$ 999,00</span>
+          <span class="preco"><small>R$</small><b>711</b><small>,55</small></span>
+          <div class="extras"><span>Frete grátis</span></div>
+          <a class="ver" href="https://meli.la/1HJFxMR" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="🔌 Eletrodomésticos — Ofertas" data-busca="máquina de costura elgin jx-4035 genius plus 31 pontos cor branco 🔌 eletrodomésticos — ofertas"
+               data-desconto="43" data-preco="539.00" data-ordem="10">
+        <span class="selo">-43%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_841781-MLA99935859263_112025-O.webp" alt="Máquina De Costura Elgin Jx-4035 Genius Plus 31 Pontos Cor Branco" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">🔌 Eletrodomésticos — Ofertas</span>
+          <h2 class="titulo">Máquina De Costura Elgin Jx-4035 Genius Plus 31 Pontos Cor Branco</h2>
+          <span class="de">De R$ 949,00</span>
+          <span class="preco"><small>R$</small><b>539</b><small>,00</small></span>
+          <div class="extras"><span>Frete grátis</span></div>
+          <a class="ver" href="https://meli.la/31h9CUz" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="🔌 Eletrodomésticos — Ofertas" data-busca="mixer power inox 3 em 1 600w elgin lunar - 🔌 eletrodomésticos — ofertas"
+               data-desconto="45" data-preco="119.00" data-ordem="11">
+        <span class="selo">-45%</span><span class="nova">Nova</span>
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_699882-MLA120141005405_102026-O.webp" alt="Mixer Power Inox 3 Em 1 600w Elgin Lunar -" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">🔌 Eletrodomésticos — Ofertas</span>
+          <h2 class="titulo">Mixer Power Inox 3 Em 1 600w Elgin Lunar -</h2>
+          <span class="de">De R$ 220,00</span>
+          <span class="preco"><small>R$</small><b>119</b><small>,00</small></span>
+          <div class="extras"><span>Frete grátis</span></div>
+          <a class="ver" href="https://meli.la/29qDFhg" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="💎 Hub Central de Afiliados" data-busca="samsung smart tv 65&quot; mini led 4k m75h 26/2027 💎 hub central de afiliados"
+               data-desconto="0" data-preco="3609.05" data-ordem="12">
+        
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_857357-MLA116062135096_092026-O.webp" alt="Samsung Smart TV 65&quot; Mini LED 4K M75H 26/2027" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">💎 Hub Central de Afiliados</span>
+          <h2 class="titulo">Samsung Smart TV 65&quot; Mini LED 4K M75H 26/2027</h2>
+          <span class="de"></span>
+          <span class="preco"><small>R$</small><b>3.609</b><small>,05</small></span>
+          <div class="extras"></div>
+          <a class="ver" href="https://meli.la/2i9QBZ4" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="⚡ Ofertas Relâmpago" data-busca="bermuda esportiva masculina futebol short treino academia ⚡ ofertas relâmpago"
+               data-desconto="0" data-preco="29.90" data-ordem="13">
+        
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_939352-MLB118373889246_102026-O-bermuda-esportiva-masculina-futebol-short-treino-academia.webp" alt="Bermuda Esportiva Masculina Futebol Short Treino Academia" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">⚡ Ofertas Relâmpago</span>
+          <h2 class="titulo">Bermuda Esportiva Masculina Futebol Short Treino Academia</h2>
+          <span class="de"></span>
+          <span class="preco"><small>R$</small><b>29</b><small>,90</small></span>
+          <div class="extras"></div>
+          <a class="ver" href="https://meli.la/1GcAjkB" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <article class="card" data-cat="⚡ Ofertas Relâmpago" data-busca="panela de pressão ceramic life pressure 4,2l areia brinox ⚡ ofertas relâmpago"
+               data-desconto="0" data-preco="199.90" data-ordem="14">
+        
+        <div class="foto"><img src="https://http2.mlstatic.com/D_NQ_NP_681726-MLA99524592290_122025-O.webp" alt="Panela De Pressão Ceramic Life Pressure 4,2l Areia Brinox" loading="lazy"></div>
+        <div class="corpo">
+          <span class="cat">⚡ Ofertas Relâmpago</span>
+          <h2 class="titulo">Panela De Pressão Ceramic Life Pressure 4,2l Areia Brinox</h2>
+          <span class="de"></span>
+          <span class="preco"><small>R$</small><b>199</b><small>,90</small></span>
+          <div class="extras"></div>
+          <a class="ver" href="https://meli.la/27EK9SV" target="_blank" rel="nofollow sponsored noopener">Ver no Mercado Livre</a>
+        </div>
+      </article>
+      <aside class="convite" id="convite">
+        <div>
+          <h3>Receba as ofertas no celular</h3>
+          <p>As promoções relâmpago acabam rápido. No canal você recebe cada uma assim que ela aparece.</p>
+        </div>
+        <div class="acoes"><a class="btn btn-tg" href="https://t.me/achadinhos_vip_oficial" target="_blank" rel="noopener">Telegram</a><a class="btn btn-wpp" href="https://chat.whatsapp.com/KfhKEQ34I7X8WumAA7NXxe" target="_blank" rel="noopener">WhatsApp</a></div>
+      </aside>
+    </div>
+    <div class="vazio" id="vazio">
+      <p>Nenhuma oferta encontrada para essa busca.</p>
+      <button id="limpar" type="button">Ver todas as ofertas</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Os links desta página são de afiliado: quando você compra por eles, recebemos uma comissão do Mercado Livre ou da Shopee, sem custo extra para você.</p>
+    <p>Preços e estoque podem mudar a qualquer momento. Confira o valor final no Mercado Livre antes de comprar.</p>
+  </div>
+</footer>
+
+<nav class="fixa" aria-label="Entrar nos canais"><a class="btn btn-tg" href="https://t.me/achadinhos_vip_oficial" target="_blank" rel="noopener">Telegram</a><a class="btn btn-wpp" href="https://chat.whatsapp.com/KfhKEQ34I7X8WumAA7NXxe" target="_blank" rel="noopener">WhatsApp</a></nav>
+<script>
+const busca=document.getElementById('busca');
+const grade=document.getElementById('grade');
+const cards=[...document.querySelectorAll('.card')];
+const chips=[...document.querySelectorAll('.chip')];
+const ordenar=document.getElementById('ordenar');
+const convite=document.getElementById('convite');
+const contagem=document.getElementById('contagem');
+const vazio=document.getElementById('vazio');
+let categoria='';
+function aplicar(){
+  const q=busca.value.trim().toLowerCase();
+  const modo=ordenar.value;
+  const lista=[...cards].sort((a,b)=>{
+    if(modo==='desconto')return b.dataset.desconto-a.dataset.desconto;
+    if(modo==='preco')return a.dataset.preco-b.dataset.preco;
+    return a.dataset.ordem-b.dataset.ordem;
+  });
+  let n=0;
+  lista.forEach(c=>{
+    const ok=(!categoria||c.dataset.cat===categoria)&&(!q||c.dataset.busca.includes(q));
+    c.hidden=!ok; grade.appendChild(c);
+    if(ok){n++; if(convite&&n===8)grade.appendChild(convite);}
+  });
+  if(convite){convite.hidden=n===0; if(n<8)grade.appendChild(convite);}
+  contagem.textContent=n===1?'1 oferta':n+' ofertas';
+  vazio.style.display=n?'none':'block';
+}
+chips.forEach(ch=>ch.addEventListener('click',()=>{
+  chips.forEach(x=>x.setAttribute('aria-pressed','false'));
+  ch.setAttribute('aria-pressed','true');
+  categoria=ch.dataset.cat; aplicar();
+}));
+busca.addEventListener('input',aplicar);
+ordenar.addEventListener('change',aplicar);
+document.getElementById('limpar').addEventListener('click',()=>{busca.value='';chips[0].click();});
+aplicar();
+</script>
+</body>
+</html>
